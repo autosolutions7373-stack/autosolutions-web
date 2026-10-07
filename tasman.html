@@ -169,6 +169,36 @@ footer strong{color:var(--gold)}
 }
 @media(max-width:500px){
   .specs,.features{grid-template-columns:1fr}
+}/* Galería de fotos */
+.thumbnails{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+  overflow-x:auto;
+  padding:4px 2px 10px;
+}
+
+.thumbnails img{
+  width:90px;
+  height:68px;
+  object-fit:cover;
+  border-radius:8px;
+  border:2px solid transparent;
+  cursor:pointer;
+  flex:0 0 auto;
+  transition:.2s;
+}
+
+.thumbnails img:hover{
+  border-color:var(--gold);
+  transform:scale(1.04);
+}
+
+@media(max-width:500px){
+  .thumbnails img{
+    width:75px;
+    height:58px;
+  }
 }
 </style>
 </head>
@@ -186,11 +216,37 @@ footer strong{color:var(--gold)}
 
 <div class="vehicle">
 
-  <div class="gallery">
-    <img class="main-photo"
-         src="assets/tasman.jpeg"
+ <div class="gallery">
+  <img class="main-photo" id="mainPhoto"
+       src="assets/tasman.jpeg"
+       alt="Kia Tasman Sport 2026">
+
+  <div class="thumbnails">
+    <img src="assets/tasman.jpeg"
+         onclick="document.getElementById('mainPhoto').src=this.src"
+         alt="Kia Tasman Sport 2026">
+
+    <img src="assets/WhatsApp Image 2026-10-06 at 2.29.44 PM (1).jpeg"
+         onclick="document.getElementById('mainPhoto').src=this.src"
+         alt="Kia Tasman Sport 2026">
+
+    <img src="assets/WhatsApp Image 2026-10-06 at 2.29.47 PM.jpeg"
+         onclick="document.getElementById('mainPhoto').src=this.src"
+         alt="Kia Tasman Sport 2026">
+
+    <img src="assets/WhatsApp Image 2026-10-06 at 2.29.52 PM (1).jpeg"
+         onclick="document.getElementById('mainPhoto').src=this.src"
+         alt="Kia Tasman Sport 2026">
+
+    <img src="assets/WhatsApp Image 2026-10-06 at 2.29.52 PM (2).jpeg"
+         onclick="document.getElementById('mainPhoto').src=this.src"
+         alt="Kia Tasman Sport 2026">
+
+    <img src="assets/WhatsApp Image 2026-10-06 at 2.29.52 PM.jpeg"
+         onclick="document.getElementById('mainPhoto').src=this.src"
          alt="Kia Tasman Sport 2026">
   </div>
+</div>
 
   <div class="info">
     <span class="badge">DISPONIBLE</span>
